@@ -16,6 +16,8 @@ public class Main {
             System.out.println("1-Agregar");
             System.out.println("2-Ver lista");
             System.out.println("3-Buscar");
+            System.out.println("4-Eliminar");
+            System.out.println("5-Modificar")
             System.out.println("Selecciona la opcion ");
             opcion = teclado.nextInt();
 
@@ -23,6 +25,8 @@ public class Main {
                 case 1 -> mControl.agregar();
                 case 2 -> mControl.ver();
                 case 3 -> mControl.buscar();
+                case 4 -> mControl.eliminar();
+                case 5 -> mControl.modificar();
 
             }
         } while (opcion != 0);

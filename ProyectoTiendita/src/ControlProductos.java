@@ -17,11 +17,19 @@ public class ControlProductos {
     }
 
     void ver() {
-        throw new UnsupportedOperationException("En construcción."); 
+        
     }
 
     void buscar() {
         throw new UnsupportedOperationException("En construcción."); 
+    }
+
+    void eliminar() {
+
+    }
+
+    void modificar(){
+        
     }
     
     
