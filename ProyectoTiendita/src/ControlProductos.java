@@ -23,14 +23,5 @@ public class ControlProductos {
     void buscar() {
         throw new UnsupportedOperationException("En construcción."); 
     }
-
-    void eliminar() {
-
-    }
-
-    void modificar(){
-        
-    }
-    
     
 }
