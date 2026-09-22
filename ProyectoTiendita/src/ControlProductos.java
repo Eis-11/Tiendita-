@@ -93,4 +93,19 @@ public class ControlProductos {
 
         System.out.println("No se encontro un producto con ese codigo.");
     }
+
+    void eliminar() {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Ingresa el codigo del producto que deseas eliminar:");
+        int codigo = teclado.nextInt();
+
+        Producto producto = new Producto(codigo, "", 0);
+
+        if (listaProductos.remove(producto)) {
+            System.out.println("Producto eliminado correctamente.");
+        } else {
+            System.out.println("Producto no encontrado.");
+        }
+    }
 }
