@@ -65,4 +65,32 @@ public class ControlProductos {
 
         System.out.println("Producto no encontrado.");
     }
+
+    void Modificar() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa el codigo del producto que deseas modificar: ");
+        int codigo = scanner.nextInt();
+        scanner.nextLine();
+
+        for (Producto producto : listaProductos) {
+
+            if (producto.getCodigo() == codigo) {
+
+                System.out.print("Ingresa la nueva descripcion: ");
+                String nuevaDescripcion = scanner.nextLine();
+
+                System.out.print("Ingresa el nuevo precio: ");
+                float nuevoPrecio = scanner.nextFloat();
+
+                producto.setDescripcion(nuevaDescripcion);
+                producto.setPrecio(nuevoPrecio);
+
+                System.out.println("Producto modificado correctamente.");
+                return;
+            }
+        }
+
+        System.out.println("No se encontro un producto con ese codigo.");
+    }
 }
