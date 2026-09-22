@@ -20,9 +20,15 @@ public class ControlProductos {
         throw new UnsupportedOperationException("En construcción."); 
     }
 
-    void buscar() {
-        throw new UnsupportedOperationException("En construcción."); 
+    void buscar(int codigo) {
+    for (Producto producto : listaProductos) {
+        if (producto.getcodigo() == codigo) {
+            System.out.println("Producto encontrado: " + producto.getNombre());
+            System.out.println("Precio: " + producto.getPrecio());
+            return;
+        }
     }
-    
-    
-}
+
+    System.out.println("Producto no encontrado");
+} 
+    }
