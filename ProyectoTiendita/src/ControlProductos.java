@@ -48,6 +48,21 @@ public class ControlProductos {
     }
 
     void buscar() {
-        throw new UnsupportedOperationException("En construcción.");
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Codigo del producto a buscar:");
+        int codigo = teclado.nextInt();
+
+        for (Producto producto : listaProductos) {
+            if (producto.getCodigo() == codigo) {
+                System.out.println("\nProducto encontrado");
+                System.out.println("Codigo: " + producto.getCodigo());
+                System.out.println("Descripcion: " + producto.getDescripcion());
+                System.out.println("Precio: $" + producto.getPrecio());
+                return;
+            }
+        }
+
+        System.out.println("Producto no encontrado.");
     }
 }
